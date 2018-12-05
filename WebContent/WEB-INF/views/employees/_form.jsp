@@ -17,7 +17,7 @@
 <input type="text" name="name" value="${employee.name}" />
 <br /><br />
 
-<label for="password">パスワード</label><br />
+<label for="password">パスワード</label><br /><%-- 編集画面では、初期値として入っていない。--%>
 <input type="password" name="password" />
 <br /><br />
 
