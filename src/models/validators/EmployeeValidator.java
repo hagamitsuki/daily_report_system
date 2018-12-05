@@ -40,7 +40,7 @@ public class EmployeeValidator {
 
         if(code_duplicate_check_flag){//Boolean型のcode_duplicate_check_flagがtrueだったら
             EntityManager em = DBUtil.createEntityManager();
-            /*employees_countに、指定した社員番号がいくつあるかをカウントした結果を入れる（あれば1がかえる？）*/
+            /*employees_countに、入力した社員番号がいくつあるかをカウントした結果を入れる（あれば1がかえる？）*/
             long employees_count = (long)em.createNamedQuery("checkRegisteredCode", Long.class)
                                             .setParameter("code", code)
                                             .getSingleResult();
