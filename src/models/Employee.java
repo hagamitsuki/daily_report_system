@@ -28,6 +28,7 @@ import javax.persistence.Table;
     @NamedQuery(//従業員がログインするときに社員番号とパスワードが正しいかどうか
             name = "checkLoginCodeAndPassword",
             query = "SELECT e FROM Employee AS e WHERE e.delete_flag = 0 AND e.code = :code AND e.password = :pass"
+            //全Employeeの中からdelete_flag=0（現役）かつ codeとpasswordが入力した値と一致するものを取得せよ
             )
 
 })
