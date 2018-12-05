@@ -15,7 +15,7 @@ public class EmployeeValidator {
 
         String code_error = _validateCode(e.getCode(), code_duplicate_check_flag);
         if(!code_error.equals("")){
-            errors.add(code_error);/*"code_error"= 入力された～存在しています。*/
+            errors.add(code_error);/*"code_error"= 入力された～存在しています。（以下のメソッドの戻り値）*/
         }
 
         String name_error = _validateName(e.getName());
@@ -41,7 +41,7 @@ public class EmployeeValidator {
         if(code_duplicate_check_flag){//Boolean型のcode_duplicate_check_flagがtrueだったら
             EntityManager em = DBUtil.createEntityManager();
             /*employees_countに、指定した社員番号がいくつあるかをカウントした結果を入れる（あれば1がかえる？）*/
-            long employees_count = (long)em.createNamedQuery("checkRegisterdCode", Long.class)
+            long employees_count = (long)em.createNamedQuery("checkRegisteredCode", Long.class)
                                             .setParameter("code", code)
                                             .getSingleResult();
 
