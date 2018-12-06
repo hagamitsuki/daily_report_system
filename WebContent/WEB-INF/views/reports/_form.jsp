@@ -12,7 +12,7 @@
 <label for="report_date">日付</label><br />
 <input type="date" name="report_date" value="<fmt:formatDate value='${report.report_date}' pattern='yyyy-MM-dd' />" />
 <br /><br />
-<%-- type="date"にしたのは、ブラウザによっては入力補助機能が付く可能性があるから。--%>>
+<%-- type="date"にしたのは、ブラウザによっては入力補助機能が付く可能性があるから。--%>
 
 <label for="name">氏名</label><br />
 <c:out value="${sessionScope.login_employee.name}" />
