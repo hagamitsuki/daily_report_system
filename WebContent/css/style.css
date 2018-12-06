@@ -1,4 +1,4 @@
-CHARSET "UTF-8";
+@CHARSET "UTF-8";
 
 body {
     color: #333333;
@@ -69,7 +69,6 @@ button {
 #footer {
     text-align: center;
 }
-
 #flush_success {
     width: 100%;
     padding-top: 28px;
@@ -110,7 +109,6 @@ tr.row0 {
 select {
     height: 30px;
 }
-
 #header_menu {
     width: 57%;
     padding-top: 17px;
@@ -133,5 +131,3 @@ select {
 h1 a {
     color: #eeeeee;
 }
-
-
