@@ -95,7 +95,7 @@ public class LodginServlet extends HttpServlet {
             RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/login/login.jsp");
             rd.forward(request, response);
 
-/*④：trueの場合*/
+/*④：trueの場合→ TopPageに飛ぶよ*/
         } else {//trueの場合セッションスコープにlogin_employeeとしてe(=Employeeオブジェクト)として格納
             request.getSession().setAttribute("login_employee", e);
 
